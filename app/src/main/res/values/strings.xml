@@ -6,4 +6,5 @@
     <string name="now_playing">Now Playing</string>
     <string name="upcoming">Upcoming</string>
     <string name="popular">Popular</string>
+    <string name="description">Description</string>
 </resources>

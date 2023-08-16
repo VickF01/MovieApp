@@ -1,5 +1,6 @@
 package com.example.movieapp.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.movieapp.core.data.source.Resource
 import com.example.movieapp.core.ui.MovieAdapter
 import com.example.movieapp.databinding.FragmentHomeBinding
+import com.example.movieapp.ui.detail.DetailActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
@@ -35,15 +37,25 @@ class HomeFragment : Fragment() {
         if (activity != null) {
             val nowPlayingAdapter = MovieAdapter()
 
+            nowPlayingAdapter.onItemClick = {
+                val intent = Intent(activity, DetailActivity::class.java)
+                intent.putExtra(DetailActivity.EXTRA_DATA, it)
+                startActivity(intent)
+            }
+
             homeViewModel.now_playing.observe(this) {
                 if (it != null) {
                     when (it) {
-                        is Resource.Loading -> {}
+                        is Resource.Loading -> {
+                            binding.progressBar.visibility = View.VISIBLE
+                        }
                         is Resource.Success -> {
+                            binding.progressBar.visibility = View.GONE
                             nowPlayingAdapter.setData(it.data)
                         }
                         is Resource.Error -> {
-                            Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show()
+                            binding.progressBar.visibility = View.GONE
+                            Toast.makeText(context, "Error! Please try again later.", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }

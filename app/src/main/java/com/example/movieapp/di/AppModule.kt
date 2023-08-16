@@ -2,6 +2,7 @@ package com.example.movieapp.di
 
 import com.example.movieapp.core.domain.usecase.MovieInteractor
 import com.example.movieapp.core.domain.usecase.MovieUseCase
+import com.example.movieapp.ui.detail.DetailViewModel
 import com.example.movieapp.ui.home.HomeViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.scope.get
@@ -12,5 +13,6 @@ val useCaseModule = module {
 }
 
 val viewModelModule = module {
-    viewModel { HomeViewModel(get())}
+    viewModel { HomeViewModel(get()) }
+    viewModel { DetailViewModel(get()) }
 }

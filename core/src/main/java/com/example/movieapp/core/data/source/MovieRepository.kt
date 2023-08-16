@@ -32,9 +32,8 @@ class MovieRepository(
                 localDataSource.insertMovie(DataMapper.mapResponseToEntities(data))
             }
 
-            override fun shouldFetch(data: List<Movie>?): Boolean {
-                return true
-            }
+            override fun shouldFetch(data: List<Movie>?): Boolean = data == null || data.isEmpty()
+
         }.asFlow()
 
     }
