@@ -30,7 +30,8 @@
             android:layout_marginStart="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/now_playing" />
+            app:layout_constraintTop_toBottomOf="@+id/now_playing"
+            tools:listitem="@layout/now_playing_item"/>
 
         <TextView
             android:id="@+id/popular"
