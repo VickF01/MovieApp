@@ -18,8 +18,8 @@ data class MovieEntity (
     @ColumnInfo(name = "overview")
     val overview: String,
 
-    @ColumnInfo(name = "poster")
-    val poster: String,
+    @ColumnInfo(name = "poster_path")
+    val poster_path: String,
 
     @ColumnInfo(name = "vote_average")
     val vote_average: String,

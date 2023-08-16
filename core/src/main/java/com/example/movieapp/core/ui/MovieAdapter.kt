@@ -25,7 +25,7 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.ListViewHolder>() {
         private val binding = NowPlayingItemBinding.bind(itemView)
         fun bind(data: Movie) {
             with(binding) {
-                Glide.with(itemView.context).load(data.poster).into(image)
+                Glide.with(itemView.context).load(data.poster_path).into(image)
                 movieTitle.text = data.original_title
                 rating.text = "${data.vote_average} / 10"
             }

@@ -7,17 +7,5 @@
         <item
             android:id="@+id/nav_home"
             android:title="@string/home" />
-
-        <item
-            android:id="@+id/now_playing"
-            android:title="@string/now_playing" />
-
-        <item
-            android:id="@+id/popular"
-            android:title="@string/popular"/>
-
-        <item
-            android:id="@+id/upcoming_movie"
-            android:title="@string/upcoming" />
     </group>
 </menu>

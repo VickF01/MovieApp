@@ -12,7 +12,7 @@ object DataMapper {
                 it.id,
                 it.original_title,
                 it.overview,
-                it.poster,
+                it.poster_path,
                 it.vote_average,
                 false
             )
@@ -27,7 +27,7 @@ object DataMapper {
                 it.id,
                 it.original_title,
                 it.overview,
-                it.poster,
+                it.poster_path,
                 it.vote_average,
                 false
             )
@@ -38,7 +38,7 @@ object DataMapper {
         input.id,
         input.original_title,
         input.overview,
-        input.poster,
+        input.poster_path,
         input.vote_average,
         input.isFavorite
     )
