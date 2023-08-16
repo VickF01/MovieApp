@@ -26,7 +26,7 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.ListViewHolder>() {
         fun bind(data: Movie) {
             with(binding) {
                 Glide.with(itemView.context).load(data.poster_path).into(image)
-                movieTitle.text = data.original_title
+                movieTitle.text = data.title
                 rating.text = "${data.vote_average} / 10"
             }
         }

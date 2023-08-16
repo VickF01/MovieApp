@@ -10,7 +10,7 @@ object DataMapper {
         input.map {
             val news = MovieEntity(
                 it.id,
-                it.original_title,
+                it.title,
                 it.overview,
                 "https://image.tmdb.org/t/p/w500" + it.poster_path,
                 it.vote_average,
@@ -25,7 +25,7 @@ object DataMapper {
         return input.map {
             Movie(
                 it.id,
-                it.original_title,
+                it.title,
                 it.overview,
                 "https://image.tmdb.org/t/p/w500" + it.poster_path,
                 it.vote_average,
@@ -36,7 +36,7 @@ object DataMapper {
 
     fun mapDomainToEntity(input: Movie) = MovieEntity(
         input.id,
-        input.original_title,
+        input.title,
         input.overview,
         "https://image.tmdb.org/t/p/w500" + input.poster_path,
         input.vote_average,

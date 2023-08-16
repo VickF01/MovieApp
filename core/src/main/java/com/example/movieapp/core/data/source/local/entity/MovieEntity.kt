@@ -12,8 +12,8 @@ data class MovieEntity (
     @ColumnInfo(name = "id")
     val id: String,
 
-    @ColumnInfo(name = "original_title")
-    val original_title: String,
+    @ColumnInfo(name = "title")
+    val title: String,
 
     @ColumnInfo(name = "overview")
     val overview: String,

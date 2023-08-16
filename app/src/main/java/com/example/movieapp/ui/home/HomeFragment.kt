@@ -51,7 +51,6 @@ class HomeFragment : Fragment() {
 
             with(binding.rvHomeNow) {
                 layoutManager = GridLayoutManager(context, 2)
-                setHasFixedSize(true)
                 adapter = nowPlayingAdapter
             }
         }
