@@ -14,6 +14,13 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.ListViewHolder>() {
     private var listData = ArrayList<Movie>()
     var onItemClick: ((Movie) -> Unit)? = null
 
+    fun setData(newListData: List<Movie>?) {
+        if (newListData == null) return
+        listData.clear()
+        listData.addAll(newListData)
+        notifyDataSetChanged()
+    }
+
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding = NowPlayingItemBinding.bind(itemView)
         fun bind(data: Movie) {

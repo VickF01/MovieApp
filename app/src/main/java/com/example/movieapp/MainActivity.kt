@@ -2,6 +2,8 @@ package com.example.movieapp
 
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
+import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -11,7 +13,11 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.example.movieapp.core.data.source.Resource
+import com.example.movieapp.core.ui.MovieAdapter
 import com.example.movieapp.databinding.ActivityMainBinding
+import com.example.movieapp.ui.home.HomeViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,6 +42,10 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
+
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
