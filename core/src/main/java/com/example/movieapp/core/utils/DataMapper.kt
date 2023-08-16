@@ -12,7 +12,7 @@ object DataMapper {
                 it.id,
                 it.original_title,
                 it.overview,
-                it.poster_path,
+                "https://image.tmdb.org/t/p/w500" + it.poster_path,
                 it.vote_average,
                 false
             )
@@ -27,7 +27,7 @@ object DataMapper {
                 it.id,
                 it.original_title,
                 it.overview,
-                it.poster_path,
+                "https://image.tmdb.org/t/p/w500" + it.poster_path,
                 it.vote_average,
                 false
             )
@@ -38,7 +38,7 @@ object DataMapper {
         input.id,
         input.original_title,
         input.overview,
-        input.poster_path,
+        "https://image.tmdb.org/t/p/w500" + input.poster_path,
         input.vote_average,
         input.isFavorite
     )
