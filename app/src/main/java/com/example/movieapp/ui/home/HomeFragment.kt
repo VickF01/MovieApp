@@ -37,9 +37,9 @@ class HomeFragment : Fragment() {
         if (activity != null) {
             val nowPlayingAdapter = MovieAdapter()
 
-            nowPlayingAdapter.onItemClick = {
+            nowPlayingAdapter.onItemClick = { selectedData ->
                 val intent = Intent(activity, DetailActivity::class.java)
-                intent.putExtra(DetailActivity.EXTRA_DATA, it)
+                intent.putExtra(DetailActivity.EXTRA_DATA, selectedData)
                 startActivity(intent)
             }
 

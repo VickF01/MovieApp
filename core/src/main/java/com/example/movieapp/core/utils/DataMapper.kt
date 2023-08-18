@@ -29,7 +29,7 @@ object DataMapper {
                 it.overview,
                 it.poster_path,
                 it.vote_average,
-                false
+                it.isFavorite
             )
         }
     }
