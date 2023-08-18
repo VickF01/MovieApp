@@ -7,4 +7,5 @@
     <string name="upcoming">Upcoming</string>
     <string name="popular">Popular</string>
     <string name="description">Description</string>
+    <string name="title_favorite">Favorite</string>
 </resources>

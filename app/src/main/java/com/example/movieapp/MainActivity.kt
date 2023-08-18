@@ -1,5 +1,7 @@
 package com.example.movieapp
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.View
@@ -44,7 +46,10 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
 
-
+        binding.appBarMain.favBtn.setOnClickListener {
+            val uri = Uri.parse("movieapp://favorite")
+            startActivity(Intent(Intent.ACTION_VIEW, uri))
+        }
 
     }
 

@@ -1,6 +1,7 @@
 package com.example.movieapp.core.di
 
 import androidx.room.Room
+import com.example.movieapp.core.BuildConfig
 import com.example.movieapp.core.data.source.MovieRepository
 import com.example.movieapp.core.data.source.local.LocalDataSource
 import com.example.movieapp.core.data.source.local.room.MovieDatabase
@@ -8,7 +9,6 @@ import com.example.movieapp.core.data.source.remote.RemoteDataSource
 import com.example.movieapp.core.data.source.remote.network.ApiService
 import com.example.movieapp.core.domain.repository.IMovieRepository
 import com.example.movieapp.core.utils.AppExecutors
-import okhttp3.OkHttp
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -38,7 +38,7 @@ val networkModule = module {
 
     single {
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://api.themoviedb.org/3/movie/")
+            .baseUrl(BuildConfig.BASEURL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(get())
             .build()
